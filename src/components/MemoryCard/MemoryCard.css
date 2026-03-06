@@ -1,0 +1,85 @@
+.memory-card {
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.polaroid-wrapper {
+  background: rgba(17, 22, 51, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px;
+  box-shadow: 0 10px 35px rgba(0, 217, 255, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.polaroid-wrapper:hover {
+  background: rgba(17, 22, 51, 0.7);
+  box-shadow: 0 15px 45px rgba(0, 217, 255, 0.15);
+  transform: translateY(-6px);
+}
+
+.polaroid-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.polaroid-text {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.polaroid-text h3 {
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+}
+
+.memory-date {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.6), rgba(100, 230, 255, 0.4));
+  border-radius: 50%;
+  top: -8px;
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.pin-1 {
+  left: 20%;
+  animation: rotate 3s infinite;
+}
+
+.pin-2 {
+  right: 20%;
+  animation: rotate 3.5s infinite reverse;
+}
+
+@keyframes rotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@media (max-width: 768px) {
+  .polaroid-wrapper {
+    padding: 10px;
+  }
+
+  .polaroid-image {
+    height: 150px;
+  }
+}

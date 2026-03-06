@@ -1,0 +1,577 @@
+.memories-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0A0E27 0%, #050A1F 50%, #0A0E27 100%);
+  padding: 80px 20px 40px;
+}
+
+.memories-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInScale 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Photo Grid Styles */
+.memory-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  background: rgba(17, 22, 51, 0.4);
+}
+
+.memory-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.memory-photo:hover img {
+  transform: scale(1.08);
+}
+
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 217, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+}
+
+.memory-photo:hover .photo-overlay {
+  opacity: 1;
+}
+
+.photo-overlay span {
+  color: #00D9FF;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Memory Modal Styles */
+.memory-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.memory-modal-content {
+  background: rgba(17, 22, 51, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  border-radius: 24px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
+  animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.memory-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 217, 255, 0.15);
+  color: #00D9FF;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 217, 255, 0.1);
+}
+
+.memory-modal-close:hover {
+  background: rgba(0, 217, 255, 0.25);
+  transform: rotate(90deg);
+  box-shadow: 0 6px 18px rgba(0, 217, 255, 0.2);
+}
+
+.memory-modal-body {
+  padding: 2rem;
+}
+
+.memory-modal-image {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 35px rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.memory-modal-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Full Image Modal Styles */
+.memory-modal-content.full-image {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 16px;
+}
+
+.full-image-body {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-view-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.memory-modal-image:hover img {
+  transform: scale(1.03);
+}
+
+.memory-modal-info h2 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.memory-modal-date {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.memory-modal-story {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  text-align: justify;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+}
+
+.memory-highlights {
+  margin-top: 20px;
+}
+
+.memory-highlights h4 {
+  color: #00D9FF;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+}
+
+.highlights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.highlight-tag {
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  color: #00D9FF;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.highlight-tag:hover {
+  background: rgba(0, 217, 255, 0.15);
+  border-color: rgba(0, 217, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar for modal */
+.memory-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.memory-modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 217, 255, 0.05);
+  border-radius: 10px;
+}
+
+.memory-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.3);
+  border-radius: 10px;
+}
+
+.memory-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 217, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .memories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+  }
+
+  .memory-modal-content {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .memories-page {
+    padding: 70px 15px 40px;
+  }
+
+  .memories-header {
+    margin-bottom: 40px;
+  }
+
+  .memories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .memory-modal-content {
+    max-height: 90vh;
+    max-width: 95vw;
+    border-radius: 20px;
+  }
+
+  .memory-modal-body {
+    padding: 1.5rem;
+  }
+
+  .memory-modal-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-modal-image img {
+    height: 200px;
+  }
+
+  .memory-modal-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .memory-modal-date {
+    font-size: 0.9rem;
+  }
+
+  .memory-modal-story {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .memory-highlights h4 {
+    font-size: 0.9rem;
+  }
+
+  .highlight-tag {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .memory-modal-close {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .memories-page {
+    padding: 60px 10px 40px;
+  }
+
+  .memories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .memory-modal-backdrop {
+    padding: 10px;
+  }
+
+  .memory-modal-content {
+    border-radius: 16px;
+  }
+
+  .memory-modal-body {
+    padding: 1rem;
+  }
+
+  .memory-modal-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .memory-modal-date {
+    font-size: 0.85rem;
+  }
+
+  .memory-modal-story {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .highlights-list {
+    gap: 8px;
+  }
+
+  .highlight-tag {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+}
+
+.highlights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.highlight-tag {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(139, 0, 0, 0.1));
+  border: 1.5px solid #D4AF37;
+  color: #D4AF37;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.highlight-tag:hover {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(139, 0, 0, 0.2));
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar for modal */
+.memory-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.memory-modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.memory-modal-content::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 10px;
+}
+
+.memory-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #8B0000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .memories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+  }
+
+  .memory-modal-content {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .memories-page {
+    padding: 70px 15px 40px;
+  }
+
+  .memories-header {
+    margin-bottom: 40px;
+  }
+
+  .memories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .memory-modal-content {
+    max-height: 90vh;
+    max-width: 95vw;
+    border-radius: 8px;
+  }
+
+  .memory-modal-body {
+    padding: 1.5rem;
+  }
+
+  .memory-modal-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .memory-modal-image img {
+    height: 200px;
+  }
+
+  .memory-modal-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .memory-modal-date {
+    font-size: 0.9rem;
+  }
+
+  .memory-modal-story {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .memory-highlights h4 {
+    font-size: 0.9rem;
+  }
+
+  .highlight-tag {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  .memory-modal-close {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .memories-page {
+    padding: 60px 10px 40px;
+  }
+
+  .memories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .memory-modal-backdrop {
+    padding: 10px;
+  }
+
+  .memory-modal-content {
+    border-radius: 6px;
+  }
+
+  .memory-modal-body {
+    padding: 1rem;
+  }
+
+  .memory-modal-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .memory-modal-date {
+    font-size: 0.85rem;
+  }
+
+  .memory-modal-story {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  .highlights-list {
+    gap: 8px;
+  }
+
+  .highlight-tag {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+}
+
+/* Animation for grid items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth transitions */
+.memories-grid > div {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Golden accent line */
+.memory-modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+/* Cinematic feel - spotlight effect on modal */
+.memory-modal-content {
+  position: relative;
+  box-shadow: 
+    0 20px 60px rgba(212, 175, 55, 0.3),
+    inset 0 1px 0 rgba(212, 175, 55, 0.1);
+}
