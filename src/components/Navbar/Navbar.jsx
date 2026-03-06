@@ -11,7 +11,7 @@ export default function Navbar() {
   const navLinks = [
     { to: "/", text: "Home" },
     { to: "/memories", text: "Memories" },
-    { to: "/awards", text: "Awards" },
+    { to: "/awards", text: "Taglines" },
     { to: "/guestbook", text: "Teacher Messages" },
   ];
 

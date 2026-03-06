@@ -8,42 +8,42 @@ export default function Guestbook() {
       id: 1,
       name: "Mrs. Priya Sharma",
       subject: "English Literature",
-      message: "Batch of 2026, you've been an absolute joy to teach. Your creativity and enthusiasm in class discussions will always remain with me. I'll miss your laughter and brilliant insights!",
+      message: "Batch of 2026, I miss your lively discussions and creative writing sessions every day. Your enthusiasm for literature made my classes unforgettable. Come back and visit soon!",
       photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
     },
     {
       id: 2,
       name: "Mr. Rajesh Kumar",
       subject: "Mathematics",
-      message: "This batch has taught me as much as I've taught you. Your persistence, curiosity, and willingness to challenge conventions have inspired me. You will do great things!",
+      message: "I miss seeing your bright faces in math class and hearing your 'aha!' moments when solving problems. This batch was special - your curiosity and determination will always stay with me.",
       photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
     },
     {
       id: 3,
       name: "Ms. Ananya Singh",
       subject: "Science",
-      message: "Your inquisitive minds and passion for learning made every lab session memorable. I'm so proud of each and every one of you. The world is ready for your brilliance!",
+      message: "The lab just isn't the same without your excited questions and discoveries. I miss your passion for science and the way you made every experiment an adventure. You were an incredible batch!",
       photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
     },
     {
       id: 4,
       name: "Dr. Vikram Patel",
       subject: "History & Geography",
-      message: "Your thoughtful questions and perspectives have enriched my teaching. It's been a privilege watching you grow into thoughtful young adults. Never lose your curiosity!",
+      message: "I miss our debates about historical events and your thoughtful perspectives on world issues. This batch challenged me to be a better teacher. Your curiosity and kindness will be deeply missed.",
       photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
     },
     {
       id: 5,
       name: "Mrs. Deepika Desai",
       subject: "Art & Design",
-      message: "The creativity and expression you've shown in class has been wonderful to witness. You all have unique talents that make the world more beautiful. Keep creating!",
+      message: "My art room feels empty without your creative energy and unique artistic voices. I miss seeing your projects come to life and the joy you brought to every class. You were truly inspiring!",
       photo: "https://images.unsplash.com/photo-1502085945533-8a40f178bac4?w=200&h=200&fit=crop",
     },
     {
       id: 6,
       name: "Mr. Arun Singh",
       subject: "Physical Education",
-      message: "You've shown tremendous spirit and teamwork. Your dedication both on and off the field has been inspiring. Go out there and make us proud!",
+      message: "The playground echoes with memories of your teamwork and sportsmanship. I miss your energy, your cheers, and the way you supported each other. This was the most spirited batch I've ever coached!",
       photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop",
     },
   ];
@@ -110,7 +110,7 @@ export default function Guestbook() {
               <h3 className="teacher-name">{teacher.name}</h3>
               <p className="teacher-subject">{teacher.subject}</p>
 
-              <p className="testimonial-message">{teacher.message}</p>
+              <p className="testimonial-message">"{teacher.message}"</p>
             </div>
 
             <div className="testimonial-decoration"></div>

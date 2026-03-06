@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import Gallery from "./pages/Gallery/Gallery";
 import Memories from "./pages/Memories/Memories";
 import Awards from "./pages/Awards/Awards";
+import Guestbook from "./pages/Guestbook/Guestbook";
 
 // Styles
 import "./App.css";
@@ -33,6 +34,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/memories" element={<Memories />} />
           <Route path="/awards" element={<Awards />} />
+          <Route path="/guestbook" element={<Guestbook />} />
         </Routes>
         <Footer />
       </div>
