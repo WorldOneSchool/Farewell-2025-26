@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/Farewell-2025-26/static/css/main.3036222a.css",
-    "main.js": "/Farewell-2025-26/static/js/main.9690c18d.js",
+    "main.js": "/Farewell-2025-26/static/js/main.aa41d0ec.js",
     "static/media/Bhaskar.jpg": "/Farewell-2025-26/static/media/Bhaskar.e74a66c3d7149027e55d.jpg",
     "static/media/k.kishore.jpg": "/Farewell-2025-26/static/media/k.kishore.2555e7f4877872e76282.jpg",
+    "static/media/background song.mp3": "/Farewell-2025-26/static/media/background song.713e43156afbd523ef06.mp3",
     "static/media/9.PNG": "/Farewell-2025-26/static/media/9.278077a11e2bb5f399db.PNG",
     "static/media/3.PNG": "/Farewell-2025-26/static/media/3.2b5c6f335667d2322e2b.PNG",
     "static/media/14.PNG": "/Farewell-2025-26/static/media/14.85de5b217cede79ccf8f.PNG",
@@ -88,10 +89,10 @@
     "static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (1).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (1).77d35ae98a39ecc1fdcb.jpeg",
     "index.html": "/Farewell-2025-26/index.html",
     "main.3036222a.css.map": "/Farewell-2025-26/static/css/main.3036222a.css.map",
-    "main.9690c18d.js.map": "/Farewell-2025-26/static/js/main.9690c18d.js.map"
+    "main.aa41d0ec.js.map": "/Farewell-2025-26/static/js/main.aa41d0ec.js.map"
   },
   "entrypoints": [
     "static/css/main.3036222a.css",
-    "static/js/main.9690c18d.js"
+    "static/js/main.aa41d0ec.js"
   ]
 }
