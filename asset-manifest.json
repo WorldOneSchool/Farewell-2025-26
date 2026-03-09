@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/Farewell-2025-26/static/css/main.9d7aea40.css",
-    "main.js": "/Farewell-2025-26/static/js/main.c965f0d3.js",
+    "main.css": "/Farewell-2025-26/static/css/main.3036222a.css",
+    "main.js": "/Farewell-2025-26/static/js/main.9690c18d.js",
+    "static/media/Bhaskar.jpg": "/Farewell-2025-26/static/media/Bhaskar.e74a66c3d7149027e55d.jpg",
+    "static/media/k.kishore.jpg": "/Farewell-2025-26/static/media/k.kishore.2555e7f4877872e76282.jpg",
     "static/media/9.PNG": "/Farewell-2025-26/static/media/9.278077a11e2bb5f399db.PNG",
     "static/media/3.PNG": "/Farewell-2025-26/static/media/3.2b5c6f335667d2322e2b.PNG",
     "static/media/14.PNG": "/Farewell-2025-26/static/media/14.85de5b217cede79ccf8f.PNG",
@@ -68,7 +70,10 @@
     "static/media/WhatsApp Image 2026-03-05 at 10.54.25 AM (1).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.25 AM (1).adba69e16a0f170a3db7.jpeg",
     "static/media/WhatsApp Image 2026-03-05 at 10.54.25 AM (2).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.25 AM (2).adba69e16a0f170a3db7.jpeg",
     "static/media/WhatsApp Image 2026-03-05 at 10.54.22 AM (2).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.22 AM (2).a6e45afbbf5de4755810.jpeg",
+    "static/media/padmapriya.jpg": "/Farewell-2025-26/static/media/padmapriya.dc44e45e54c1919de235.jpg",
+    "static/media/g.kishore.jpg": "/Farewell-2025-26/static/media/g.kishore.f7cb4481dc06fd722bcb.jpg",
     "static/media/IMG_7169.JPG": "/Farewell-2025-26/static/media/IMG_7169.69b02e8a3bed9a93a7f6.JPG",
+    "static/media/radhika.jpg": "/Farewell-2025-26/static/media/radhika.b2e1f04ffbfe26f8005c.jpg",
     "static/media/IMG_7154.JPG": "/Farewell-2025-26/static/media/IMG_7154.0339a2b8b93bae0013d2.JPG",
     "static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (2).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (2).bce3160ee59c484340d7.jpeg",
     "static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (3).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (3).58276d401d48b05d1e9c.jpeg",
@@ -82,11 +87,11 @@
     "static/media/WhatsApp Image 2026-03-05 at 10.54.22 AM.jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.22 AM.9c475b0dedc11870a11d.jpeg",
     "static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (1).jpeg": "/Farewell-2025-26/static/media/WhatsApp Image 2026-03-05 at 10.54.24 AM (1).77d35ae98a39ecc1fdcb.jpeg",
     "index.html": "/Farewell-2025-26/index.html",
-    "main.9d7aea40.css.map": "/Farewell-2025-26/static/css/main.9d7aea40.css.map",
-    "main.c965f0d3.js.map": "/Farewell-2025-26/static/js/main.c965f0d3.js.map"
+    "main.3036222a.css.map": "/Farewell-2025-26/static/css/main.3036222a.css.map",
+    "main.9690c18d.js.map": "/Farewell-2025-26/static/js/main.9690c18d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d7aea40.css",
-    "static/js/main.c965f0d3.js"
+    "static/css/main.3036222a.css",
+    "static/js/main.9690c18d.js"
   ]
 }
