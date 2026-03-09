@@ -40,7 +40,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>
-          Made with <Heart size={16} /> By Prajwal Mattela for the Class of 2026 | © {currentYear} Vignan World One All Rights Reserved
+          Made with <Heart size={16} /> By Prajwal Mattela & Bandari Manvitha for the Class of 2026 | © {currentYear} Vignan World One All Rights Reserved
         </p>
       </div>
     </footer>

@@ -1,19 +1,23 @@
 :root {
-  --primary: #00D9FF;
-  --secondary: #0A84FF;
-  --accent: #00D9FF;
-  --success: #00D9FF;
-  --warning: #FF6B35;
-  --bg-primary: #0A0E27;
-  --bg-secondary: #111633;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A8B5D1;
-  --text-tertiary: #7A8399;
-  --border-color: rgba(0, 217, 255, 0.1);
-  --glass-bg: rgba(17, 22, 51, 0.7);
-  --glass-border: rgba(0, 217, 255, 0.2);
-  --dark-bg: #0A0E27;
-  --darker-bg: #050A1F;
+  /* Indian Cinema Theme - Gold, Deep Red, Black */
+  --primary: #D4AF37;
+  --secondary: #8B0000;
+  --accent: #D4AF37;
+  --success: #D4AF37;
+  --warning: #DC143C;
+  --bg-primary: #0F0F0F;
+  --bg-secondary: #1A1A1A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #D4AF37;
+  --text-tertiary: #B8B8B8;
+  --border-color: rgba(212, 175, 55, 0.15);
+  --glass-bg: rgba(26, 26, 26, 0.8);
+  --glass-border: rgba(212, 175, 55, 0.3);
+  --dark-bg: #0F0F0F;
+  --darker-bg: #050505;
+  --cinema-red: #8B0000;
+  --cinema-gold: #D4AF37;
+  --cinema-grey: #3D3D3D;
 }
 
 * {

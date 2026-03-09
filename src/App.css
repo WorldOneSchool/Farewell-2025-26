@@ -1,26 +1,30 @@
 :root {
-  --primary: #00D9FF;
-  --secondary: #0A84FF;
-  --accent: #00D9FF;
-  --success: #00D9FF;
-  --warning: #FF6B35;
-  --bg-primary: #0A0E27;
-  --bg-secondary: #111633;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A8B5D1;
-  --text-tertiary: #7A8399;
-  --border-color: rgba(0, 217, 255, 0.1);
-  --glass-bg: rgba(17, 22, 51, 0.7);
-  --glass-border: rgba(0, 217, 255, 0.2);
-  --dark-bg: #0A0E27;
-  --darker-bg: #050A1F;
+  /* Indian Cinema Theme - Gold, Deep Red, Black */
+  --primary: #D4AF37;
+  --secondary: #8B0000;
+  --accent: #D4AF37;
+  --success: #D4AF37;
+  --warning: #DC143C;
+  --bg-primary: #0F0F0F;
+  --bg-secondary: #1A1A1A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #D4AF37;
+  --text-tertiary: #B8B8B8;
+  --border-color: rgba(212, 175, 55, 0.15);
+  --glass-bg: rgba(26, 26, 26, 0.8);
+  --glass-border: rgba(212, 175, 55, 0.3);
+  --dark-bg: #0F0F0F;
+  --darker-bg: #050505;
+  --cinema-red: #8B0000;
+  --cinema-gold: #D4AF37;
+  --cinema-grey: #3D3D3D;
 }
 
 .app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #0A0E27 0%, #050A1F 50%, #0A0E27 100%);
+  background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #0F0F0F 100%);
   position: relative;
 }
 
@@ -32,8 +36,9 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(10, 132, 255, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 0, 0, 0.06) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0z' fill='none'/%3E%3Cpath d='M0 0h20v20H0z' fill='none' opacity='0.02'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
 }

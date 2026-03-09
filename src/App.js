@@ -11,6 +11,7 @@ import Gallery from "./pages/Gallery/Gallery";
 import Memories from "./pages/Memories/Memories";
 import Awards from "./pages/Awards/Awards";
 import Guestbook from "./pages/Guestbook/Guestbook";
+import Agenda from "./pages/Agenda/Agenda";
 
 // Styles
 import "./App.css";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/memories" element={<Memories />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/guestbook" element={<Guestbook />} />
+          <Route path="/agenda" element={<Agenda />} />
         </Routes>
         <Footer />
       </div>

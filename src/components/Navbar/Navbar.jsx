@@ -13,6 +13,7 @@ export default function Navbar() {
     { to: "/memories", text: "Memories" },
     { to: "/awards", text: "Taglines" },
     { to: "/guestbook", text: "Teacher Messages" },
+    { to: "/agenda", text: "Agenda" },
   ];
 
   return (

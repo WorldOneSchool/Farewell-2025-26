@@ -1,0 +1,233 @@
+
+
+.agenda-cinema-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #0F0F0F 0%, #8B0000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.agenda-cinema-overlay {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px 0;
+  background: rgba(24, 13, 13, 0.92);
+  border-radius: 32px;
+  box-shadow: 0 8px 48px 0 rgba(212, 175, 55, 0.12), 0 1.5px 0 #D4AF37;
+  border: 3px solid #D4AF37;
+  padding: 48px 32px 40px 32px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.agenda-cinema-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.agenda-cinema-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.agenda-cinema-title {
+  color: #D4AF37;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #8B0000, 0 1px 0 #fff;
+  margin: 0;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.agenda-cinema-icon-left, .agenda-cinema-icon-right {
+  font-size: 2.2rem;
+  color: #D4AF37;
+  filter: drop-shadow(0 2px 4px #8B0000);
+}
+
+.agenda-cinema-subtitle {
+  color: #fffbe6;
+  font-size: 1.25rem;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-family: 'Lato', 'Arial', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-shadow: 0 1px 8px #8B0000;
+}
+
+.agenda-cinema-divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #D4AF37 0%, #fffbe6 100%);
+  border-radius: 2px;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 1px 8px #D4AF37;
+}
+
+.agenda-cinema-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.agenda-cinema-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 0 22px 0;
+  border-bottom: 1.5px dashed #D4AF37;
+  font-size: 1.18rem;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s;
+  position: relative;
+}
+
+.agenda-cinema-item:last-child {
+  border-bottom: none;
+}
+
+.agenda-cinema-item:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.agenda-cinema-time {
+  font-weight: 700;
+  color: #D4AF37;
+  font-size: 1.08em;
+  min-width: 180px;
+  letter-spacing: 0.5px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  text-align: right;
+}
+
+.agenda-cinema-dot {
+  color: #D4AF37;
+  font-size: 1.5em;
+  margin: 0 8px;
+  font-weight: 700;
+}
+
+.agenda-cinema-event {
+  color: #fffbe6;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 1.08em;
+  margin-left: 0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Filmstrip border effect */
+.agenda-cinema-overlay::before, .agenda-cinema-overlay::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: repeating-linear-gradient(90deg, #D4AF37, #D4AF37 8px, transparent 8px, transparent 24px);
+  opacity: 0.7;
+  z-index: 2;
+  border-radius: 32px 32px 0 0;
+}
+.agenda-cinema-overlay::before {
+  top: -18px;
+}
+.agenda-cinema-overlay::after {
+  bottom: -18px;
+  border-radius: 0 0 32px 32px;
+}
+
+@media (max-width: 700px) {
+  .agenda-cinema-overlay {
+    padding: 18px 2vw 16px 2vw;
+  }
+  .agenda-cinema-title {
+    font-size: 1.5rem;
+  }
+  .agenda-cinema-time {
+    min-width: 100px;
+    font-size: 1em;
+  }
+}
+
+
+.agenda-container h1 {
+  text-align: center;
+  margin-bottom: 36px;
+  color: #bfa14a;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #f3e9d2, 0 1px 0 #fff;
+}
+
+
+.agenda-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.agenda-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6c77e;
+  font-size: 1.15rem;
+  background: rgba(255, 255, 255, 0.7);
+  transition: background 0.2s;
+}
+
+.agenda-item:last-child {
+  border-bottom: none;
+}
+
+.agenda-item:hover {
+  background: #f3e9d2;
+}
+
+.agenda-item:last-child {
+  border-bottom: none;
+}
+
+
+.agenda-time {
+  font-weight: 600;
+  color: #bfa14a;
+  font-size: 1.08em;
+  min-width: 170px;
+  letter-spacing: 0.5px;
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+
+.agenda-event {
+  color: #2d3a4b;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 1.08em;
+  margin-left: 16px;
+}
+
+@media (max-width: 600px) {
+  .agenda-container {
+    padding: 18px 4vw 16px 4vw;
+  }
+  .agenda-time {
+    min-width: 110px;
+    font-size: 1em;
+  }
+  .agenda-container h1 {
+    font-size: 1.5rem;
+  }
+}
