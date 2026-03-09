@@ -35,7 +35,7 @@ export default function AudioToggle() {
       <audio
         ref={audioRef}
         loop
-        src="https://assets.mixkit.co/active_storage/audios/33029/33029-preview.mp3"
+        src={require('../../assets/songs/background song.mp3')}
       />
     </>
   );
